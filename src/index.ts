@@ -1,6 +1,7 @@
 import { HttpClient } from "./httpClient";
 import { IssueCheckList } from "./issuesCheckList";
 import { Jira } from "./Jira";
+import { ConsoleOutputFormatter } from './consoleOutputFormatter'
 
 (async function main(): Promise<void> {
 
@@ -15,5 +16,9 @@ import { Jira } from "./Jira";
   } catch (error) {
     console.error(error.message);
   }
+  
+  const consoleFormatter = new ConsoleOutputFormatter()
+
+  jiraIssuesList.output(consoleFormatter)
 
 })();

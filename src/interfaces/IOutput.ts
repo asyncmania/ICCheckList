@@ -1,5 +1,5 @@
-import { IComponent } from './IComponent';
+import { IComponent, IComponentWithIssueCount } from './IComponent';
 
 export interface IOutput {
-  format(data: IComponent[]): void
+  format(data: IComponentWithIssueCount[]): void
 }
