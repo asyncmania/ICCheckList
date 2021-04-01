@@ -6,7 +6,8 @@
     "lib": ["ES2017"]
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "__tests__"
   ],
   "types": ["node", "axios", "jest"]
 }

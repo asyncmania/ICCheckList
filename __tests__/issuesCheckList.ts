@@ -46,20 +46,20 @@ class MockDataSource implements IDataSource {
 
 describe('IssuesCheckList Class', () => {
 
-  let mockedIssueList
+  let mockedIssues
 
   beforeAll(() => {
-    mockedIssueList = new IssueCheckList(new MockDataSource())
+    mockedIssues = new IssueCheckList(new MockDataSource())
   });
 
 
   test('Should return a an array of object that contains issuesCount', async () => {
 
-      await mockedIssueList.fetchIssues()
+      await mockedIssues.fetchIssues()
      
-     expect(mockedIssueList.issuesList).toEqual(jiraIssuesList)
+     expect(mockedIssues.issuesList).toEqual(jiraIssuesList)
 
-     expect(mockedIssueList.issuesList.length).toBe(2)
+     expect(mockedIssues.issuesList.length).toBe(2)
   })
 
   test('Ouput format method should be called', () => {
@@ -68,7 +68,7 @@ describe('IssuesCheckList Class', () => {
 
     const spy = jest.spyOn(consoleOutputFormatter, 'format').mockImplementation(jest.fn())
 
-    mockedIssueList.output(consoleOutputFormatter)
+    mockedIssues.output(consoleOutputFormatter)
 
     expect(consoleOutputFormatter.format).toHaveBeenCalled();
 
