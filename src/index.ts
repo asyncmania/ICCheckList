@@ -1,6 +1,6 @@
 import { HttpClient } from "./httpClient";
 import { IssueCheckList } from "./issuesCheckList";
-import { Jira } from "./Jira";
+import { Jira } from "./jira";
 import { ConsoleOutputFormatter } from './consoleOutputFormatter'
 
 (async function main(): Promise<void> {

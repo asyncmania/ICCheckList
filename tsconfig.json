@@ -8,5 +8,5 @@
   "exclude": [
     "node_modules"
   ],
-  "types": ["node", "axios"]
+  "types": ["node", "axios", "jest"]
 }

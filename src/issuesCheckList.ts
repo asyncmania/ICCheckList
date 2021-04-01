@@ -6,10 +6,10 @@ export class IssueCheckList {
 
   private issuesList: IComponentWithIssueCount[] = [];
 
-  constructor(public source: IDataSource) {}
+  constructor(public dataSource: IDataSource) {}
 
   async fetchIssues(): Promise<void> {
-    this.issuesList = await this.source.getData();
+    this.issuesList = await this.dataSource.getData();
   }
 
   output(formatter: IOutput): void {
